@@ -196,7 +196,7 @@ const About: React.FC = () => {
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">137 <span className="about-metrics-md">hrs</span></p>
-            <p className="about-metrics-sm">Podcasts/audiobooks</p>
+            <p className="about-metrics-sm">Podcasts & Audiobooks</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">8<span className="about-metrics-md">x</span></p>
@@ -215,7 +215,7 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">New Sandbox Projects</p>
           </div>
           </div>
-          <div style={{ borderBottom: '1px solid var(--color-secondary)', marginBottom: '24px', paddingBottom: '24px' }}>
+          <div style={{ borderBottom: '1px solid var(--color-accent-blue-lite)', marginBottom: '24px', paddingBottom: '24px' }}>
           </div>
           <p className="about-diagram-header">Lifetime Metrics</p>
           <div className="about-metrics-grid-simple">
@@ -268,7 +268,7 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">Rebuilt Portfolio</p>
           </div>
           </div>
-          <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
+          <div style={{ borderTop: '1px solid var(--color-accent-blue-lite)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
           <div className="about-metrics-item">
             <p className="about-metrics-lg">{productDesignYears.toFixed(1)} <span className="about-metrics-md">yrs</span></p>
@@ -283,7 +283,7 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">Architecture</p>
           </div>
           </div>
-          <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
+          <div style={{ borderTop: '1px solid var(--color-accent-blue-lite)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
           <div className="about-metrics-item about-metrics-item-full-width">
             <p className="about-metrics-lg">{totalDesignYears} <span className="about-metrics-md">yrs</span></p>
@@ -316,7 +316,7 @@ const About: React.FC = () => {
       <section className="about-section">
         {/* Principles List */}
         <div className="about-principles-section">
-          <h2 className="about-section-header about-section-title">Principles</h2>
+          <h2 className="about-section-header">Principles</h2>
           <div className="about-principles-grid">
             <div>
               <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Layout: Visual Hierarchy & Wayfinding</h4>
@@ -347,7 +347,7 @@ const About: React.FC = () => {
 
         {/* Design Heuristics */}
         <div className="about-principles-section">
-          <h2 className="about-section-header about-section-title">Design Heuristics</h2>
+          <h2 className="about-section-header">Design Heuristics</h2>
           
           <div className="about-heuristics-grid">
             {/* Behavioral Sciences */}

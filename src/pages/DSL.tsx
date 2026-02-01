@@ -346,12 +346,12 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                   <div className="text-xs text-primary">
                     <div className="grid grid-cols-[auto_1fr] gap-x-2">
                       <div>mobile:</div><div>20px, 1.2</div>
-                      <div>768-1100px:</div><div>24px, 1.2</div>
+                      <div>768px:</div><div>24px, 1.2</div>
                       <div>1600px:</div><div>24px, 1.2</div>
                       <div>weight:</div><div>700</div>
                       <div>color:</div><div>primary</div>
-                      <div>padding:</div><div>16px (p-4)</div>
-                      <div>margin-bottom:</div><div>16px (mb-4) on label</div>
+                      <div>margin-bottom:</div><div>32px (mobile)</div>
+                      <div>margin-bottom:</div><div>48px (768px+)</div>
                     </div>
                   </div>
                 </div>

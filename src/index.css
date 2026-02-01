@@ -1233,7 +1233,7 @@
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 8px;
+  margin-bottom: 32px;
   margin-top: 0;
 }
 
@@ -1242,6 +1242,7 @@
   .about-section-header {
     font-size: 24px;
     line-height: 1.2;
+    margin-bottom: 48px;
   }
 }
 
@@ -1580,16 +1581,6 @@
 
 .about-metrics-section {
   margin-top: 32px;
-}
-
-.about-section-title {
-  margin-bottom: 32px;
-}
-
-@media (min-width: 900px) {
-  .about-section-title {
-    margin-bottom: 48px;
-  }
 }
 
 .about-section-title-sm {
@@ -1958,7 +1949,7 @@
   font-size: 28px;
   line-height: 1.2;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-accent-blue-dark) !important;
 }
 
 /* Responsive styles for about-metrics-lg */
@@ -1980,7 +1971,7 @@
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-accent-blue-dark) !important;
 }
 
 /* Responsive styles for about-metrics-md */
@@ -2002,7 +1993,7 @@
   font-size: 12px;
   line-height: 1.3;
   font-weight: 700;
-  color: var(--color-accent-blue-dark) !important;
+  color: var(--color-primary) !important;
 }
 
 /* Responsive styles for about-metrics-sm */
