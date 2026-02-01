@@ -224,12 +224,24 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">Volunteer Mentorship</p>
           </div>
           <div className="about-metrics-item">
+            <p className="about-metrics-lg">107<span className="about-metrics-md">+</span></p>
+            <p className="about-metrics-sm">User Interviews</p>
+          </div>
+          <div className="about-metrics-item">
+            <p className="about-metrics-lg">47<span className="about-metrics-md">+</span></p>
+            <p className="about-metrics-sm">Features/Improvements Shipped</p>
+          </div>
+          <div className="about-metrics-item">
+            <p className="about-metrics-lg">2</p>
+            <p className="about-metrics-sm">0→1 Design Systems Built</p>
+          </div>
+          <div className="about-metrics-item">
             <p className="about-metrics-lg">367<span className="about-metrics-md">k</span> <span className="about-metrics-md">SF</span></p>
             <p className="about-metrics-sm">Building Area Designed</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">$84<span className="about-metrics-md">M</span></p>
-            <p className="about-metrics-sm">Construction</p>
+            <p className="about-metrics-sm">Managed Construction Projects</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">$62.7<span className="about-metrics-md">M</span></p>
@@ -240,23 +252,11 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">Company Recurring Revenue Generated</p>
           </div>
           <div className="about-metrics-item">
-            <p className="about-metrics-lg">12.2<span className="about-metrics-md">k</span></p>
-            <p className="about-metrics-sm">MAU Designed For</p>
-          </div>
-          <div className="about-metrics-item">
-            <p className="about-metrics-lg">19</p>
-            <p className="about-metrics-sm">Real Estate Portfolios</p>
-          </div>
-          <div className="about-metrics-item">
-            <p className="about-metrics-lg">1</p>
-            <p className="about-metrics-sm">Professional Degree</p>
-          </div>
-          <div className="about-metrics-item">
-            <p className="about-metrics-lg">2</p>
-            <p className="about-metrics-sm">Masters Degrees</p>
-          </div>
-          <div className="about-metrics-item">
             <p className="about-metrics-lg">3</p>
+            <p className="about-metrics-sm">Higher-Ed Degree</p>
+          </div>
+          <div className="about-metrics-item">
+            <p className="about-metrics-lg">3 <span className="about-metrics-md">CE Dev</span></p>
             <p className="about-metrics-sm">Certificates</p>
           </div>
           <div className="about-metrics-item">
@@ -264,8 +264,8 @@ const About: React.FC = () => {
             <p className="about-metrics-sm">Licensing Exams</p>
           </div>
           <div className="about-metrics-item">
-            <p className="about-metrics-lg">9</p>
-            <p className="about-metrics-sm">Portfolio Iterations</p>
+            <p className="about-metrics-lg">9<span className="about-metrics-md">x</span></p>
+            <p className="about-metrics-sm">Rebuilt Portfolio</p>
           </div>
           </div>
           <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
@@ -276,7 +276,7 @@ const About: React.FC = () => {
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">3.1 <span className="about-metrics-md">yrs</span></p>
-            <p className="about-metrics-sm">Experience Design</p>
+            <p className="about-metrics-sm">Revenue-Driven Experience Design</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">7.8 <span className="about-metrics-md">yrs</span></p>
@@ -286,7 +286,7 @@ const About: React.FC = () => {
           <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
           <div className="about-metrics-item about-metrics-item-full-width">
-            <p className="about-metrics-lg">14.9 <span className="about-metrics-md">yrs</span></p>
+            <p className="about-metrics-lg">{totalDesignYears} <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Professional Design Experience</p>
           </div>
           </div>
@@ -296,11 +296,11 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Design Heuristics & Principles Section */}
+      {/* Design Principles & Heuristics Section */}
       <section className="about-section">
         <div className="break-line-landing-primary-shell about-break-line-container about-break-header">
           <div className="break-line-landing-secondary-a"></div>
-          <h2 className="about-section-break">Design Heuristics & Principles</h2>
+          <h2 className="about-section-break">Design Principles & Heuristics</h2>
           <div className="break-line-landing-secondary-b"></div>
         </div>
       </section>
@@ -312,44 +312,11 @@ const About: React.FC = () => {
         </p>
       </section>
 
-      {/* Design Heuristics & Principles Section */}
+      {/* Design Principles & Heuristics Section */}
       <section className="about-section">
-        <h2 className="about-section-header about-section-title">Design Heuristics & Principles</h2>
-        
-        <div className="about-heuristics-grid">
-          {/* Behavioral Sciences */}
-          <div>
-            <h3 className="text-lg font-semibold text-primary about-subsection-title">Behavioral Sciences</h3>
-            <p className="about-section-copy">
-              Understanding cognitive biases, decision-making patterns, and human psychology to create more intuitive and effective designs.
-            </p>
-          </div>
-
-          {/* Patterns and Mental Models */}
-          <div>
-            <h3 className="text-lg font-semibold text-primary about-subsection-title">Patterns & Mental Models</h3>
-            <p className="about-section-copy">
-              Leveraging established design patterns and user mental models to create familiar, learnable interfaces that reduce cognitive load.
-            </p>
-          </div>
-
-          {/* Third Column - Principles Project Ad */}
-          <div className="role-tag-blue-lite about-principles-card about-card-rounded"
-               style={{ backgroundColor: 'var(--color-accent-blue-lite)' }}
-               onClick={() => navigate('/work/principles-of-human-behavior')}>
-            <h3 className="text-lg font-semibold text-primary about-principles-card-title">Principles of Human Behavior</h3>
-            <p className="text-sm text-primary about-principles-card-text">
-              Explore my project on design principles grounded in behavioral science
-            </p>
-            <div className="text-primary font-semibold text-sm">
-              View Project →
-            </div>
-          </div>
-        </div>
-
         {/* Principles List */}
         <div className="about-principles-section">
-          <h3 className="text-xl font-semibold text-primary about-principles-title">Principles</h3>
+          <h2 className="about-section-header about-section-title">Principles</h2>
           <div className="about-principles-grid">
             <div>
               <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Layout: Visual Hierarchy & Wayfinding</h4>
@@ -377,11 +344,51 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Design Heuristics */}
+        <div className="about-principles-section">
+          <h2 className="about-section-header about-section-title">Design Heuristics</h2>
+          
+          <div className="about-heuristics-grid">
+            {/* Behavioral Sciences */}
+            <div>
+              <h3 className="text-lg font-semibold text-primary about-subsection-title">Behavioral Sciences</h3>
+              <p className="about-section-copy">
+                Understanding cognitive biases, decision-making patterns, and human psychology to create more intuitive and effective designs.
+              </p>
+            </div>
+
+            {/* Patterns and Mental Models */}
+            <div>
+              <h3 className="text-lg font-semibold text-primary about-subsection-title">Patterns & Mental Models</h3>
+              <p className="about-section-copy">
+                Leveraging established design patterns and user mental models to create familiar, learnable interfaces that reduce cognitive load.
+              </p>
+            </div>
+
+            {/* Third Column - Principles Project Ad */}
+            <div className="role-tag-blue-lite about-principles-card about-card-rounded"
+                 style={{ backgroundColor: 'var(--color-accent-blue-lite)' }}
+                 onClick={() => navigate('/work/principles-of-human-behavior')}>
+              <h3 className="text-lg font-semibold text-primary about-principles-card-title">Principles of Human Behavior</h3>
+              <p className="text-sm text-primary about-principles-card-text">
+                Explore my project on design principles grounded in behavioral science
+              </p>
+              <div className="text-primary font-semibold text-sm">
+                View Project →
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* AI Augmented Design Section */}
       <section className="about-section">
-        <h2 className="about-section-header about-section-title-sm">AI Augmented Design</h2>
+        <div className="break-line-landing-primary-shell about-break-line-container about-break-header">
+          <div className="break-line-landing-secondary-a"></div>
+          <h2 className="about-section-break">AI Augmented Design</h2>
+          <div className="break-line-landing-secondary-b"></div>
+        </div>
         <p className="about-section-copy about-intro-text">
           Exploring how AI tools enhance rather than replace the design process. From rapid prototyping to research synthesis, AI amplifies human creativity and strategic thinking.
         </p>
@@ -404,7 +411,11 @@ const About: React.FC = () => {
 
       {/* Collaborative Project Management Section */}
       <section className="about-section">
-        <h2 className="about-section-header about-section-title-sm">Collaborative Project Management</h2>
+        <div className="break-line-landing-primary-shell about-break-line-container about-break-header">
+          <div className="break-line-landing-secondary-a"></div>
+          <h2 className="about-section-break">Collaborative Project Management</h2>
+          <div className="break-line-landing-secondary-b"></div>
+        </div>
         <p className="about-section-copy about-intro-text">
           The soft skills of my career have been instrumental in pushing projects forward and working with a wide array of collaborators. From architecture to DXD to product design, patterns of bringing people together toward a common goal transcend specific fields. The key to project management is keeping everyone unblocked while also identifying the critical path to get things over the line.
         </p>
