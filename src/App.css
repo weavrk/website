@@ -36,3 +36,870 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hamburger Menu Animation */
+.hamburger_shell {
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger {
+  width: 31.25px;
+  height: 3.75px;
+  background-color: #323535;
+  margin: 6.25px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-first-child {
+  transform: rotate(-45deg) translate(-6.25px, 7.5px);
+}
+
+.hamburger-nth-child {
+  opacity: 0;
+}
+
+.hamburger-last-child {
+  transform: rotate(45deg) translate(-6.25px, -7.5px);
+}
+
+/* Quote Icon Positioning for Large Screens */
+@media (min-width: 1600px) {
+  .quote-icon-large-screen {
+    left: 3vw !important;
+  }
+}
+
+/* Mobile Navigation */
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  max-width: 100vw;
+  left: 0px;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 100px;
+  transform: translateY(-100%);
+  transition: transform .3s ease-in;
+  opacity: .95;
+  transition: ease-in-out 300ms;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.nav_links_show {
+  transform: translateY(0%);
+  background-color: white;
+  transition: ease-in-out 300ms;
+}
+
+.flex_mobile {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.navigation_mobilemenu {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #323535;
+  padding-left: 0px;
+  text-align: left;
+}
+
+.contact_info {
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.contact_bold {
+  font-weight: 900;
+  margin-top: 15px;
+}
+
+.contact_link {
+  text-decoration: underline;
+}
+
+.home-icon {
+  opacity: .95;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin-right: -15px;
+}
+
+/* Mobile Header */
+.mobile-header-shell {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-header-shell {
+    display: none;
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Ensure normal scrolling when menu is closed */
+@media (max-width: 767px) {
+  body:not(.mobile-menu-open) {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+  }
+}
+
+/* Hero Image Styles */
+.hero-image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Hero Image - fit width */
+@media (max-width: 767px) {
+  .hero-image {
+    background-size: contain !important;
+    background-position: center !important;
+    height: auto !important;
+    min-height: 300px;
+  }
+  
+  /* Spatial Data Project Mobile - fit height, right align */
+  .project-spatial-data .hero-image {
+    background-size: cover !important;
+    background-position: right center !important;
+    height: 50vw !important;
+    min-height: 420px;
+  }
+  
+  /* GHG Project Mobile - fill container */
+  .project-co2-emissions-dashboard .hero-image {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 50vw !important;
+    min-height: 420px;
+  }
+  
+  /* Mobile Hero Image - pin to right side */
+  .hero-image {
+    background-position: right center !important;
+  }
+}
+
+/* Tablet and Desktop Hero Image - fit height */
+@media (min-width: 768px) {
+  .hero-image {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 50vw !important;
+    min-height: 600px;
+  }
+  
+
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Spatial Data Project Specific Styles */
+.project-spatial-data .hero-image {
+  background-position: center top !important;
+  object-fit: cover;
+}
+
+/* Override for mobile spatial data project */
+@media (max-width: 767px) {
+  .project-spatial-data .hero-image {
+    background-position: 82% center !important;
+  }
+}
+
+/* Hide microscope on mobile */
+@media (max-width: 767px) {
+  .microscope-container {
+    display: none !important;
+  }
+}
+
+/* TeamSection styles */
+.team-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.team-member {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px #e0e0e0;
+  background: #fff;
+  overflow: hidden;
+  margin-left: -16px;
+  transition: box-shadow 0.2s, opacity 0.2s;
+  z-index: 10;
+  cursor: pointer;
+}
+.team-member:first-child .team-circle {
+  margin-left: 0;
+}
+
+.team-label {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 120px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 8px 16px;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 30;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  margin-top: 4px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.team-label.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .team-row {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .team-circle {
+    width: 56px;
+    height: 56px;
+    margin-left: -12px;
+  }
+  .team-label {
+    min-width: 90px;
+    font-size: 14px;
+    top: 64px;
+    padding: 6px 10px;
+  }
+  .team-instruction-text {
+    font-size: 12px !important;
+  }
+  .project-name {
+    font-size: 12px !important;
+  }
+  .project-role {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .team-instruction-text,
+  .project-name,
+  .project-role {
+    font-size: 18px !important;
+  }
+  .bc-header {
+    font-size: 18px !important;
+  }
+}
+
+/* Bento Card Metric Styles */
+
+.bc-metric-callout {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-metric-callout {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-metric-callout {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1600px) {
+  .bc-metric-callout {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+}
+
+.bc-metric-caption {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.bc-bullets {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.bc-bullets ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bc-bullets li {
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-bullets {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-bullets {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+  .bc-bullets {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1600px) {
+  .bc-bullets {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+.bc-bullets-sm {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.bc-bullets-sm ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bc-bullets-sm li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bc-bullets-sm li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-bullets-sm {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-bullets-sm {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+  .bc-bullets-sm {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1685px) {
+  .bc-bullets-sm {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+.bc-subheaders {
+  font-size: 16px;
+  font-weight: 800 !important;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-subheaders {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-subheaders {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1600px) {
+  .bc-subheaders {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}
+
+.bc-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.bc-title svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-title {
+    font-size: 18px !important;
+    line-height: 1.3;
+  }
+  
+  .bc-title span {
+    font-size: 18px !important;
+  }
+  
+  .bc-title svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .bc-title svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1600px) {
+  .bc-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .bc-title svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .bc-metric-caption {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Remove top padding from impact grid on mobile */
+  .bento-card-content .grid {
+    padding-top: 0 !important;
+  }
+  
+
+}
+
+/* Desktop bc-body paragraph margin and bc-body-copy */
+@media (min-width: 1100px) {
+  .bc-body p {
+    margin-bottom: 14px !important;
+  }
+  
+
+}
+
+
+
+/* bc-header font sizes across all breakpoints */
+.bc-header {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+}
+
+/* bc-leadin styles */
+.bc-leadin {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+/* Mobile styles */
+@media (max-width: 1099px) {
+  .bc-leadin {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1100px) and (max-width: 1599px) {
+  .bc-leadin {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1600px) {
+  .bc-leadin {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+
+
+
+
+/* Mobile styles */
+@media (max-width: 1099px) {
+  .bc-header {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+  }
+  
+  /* Override any conflicting mobile styles */
+  .bento-card-content .bc-header,
+  .bento-card .bc-header {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+  }
+  
+  .bc-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+}
+
+/* Desktop styles - matching cell height breakpoints */
+@media (min-width: 1100px) {
+  .bc-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+  
+  .bc-header {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+  }
+  
+
+}
+
+/* Desktop styles - matching cell height breakpoints */
+@media (min-width: 1600px) {
+  .bc-title {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+  }
+  
+  .bc-header {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+  }
+  
+
+}
+
+/* Desktop styles - matching cell height breakpoints */
+@media (min-width: 1100px) {
+  .bc-metric-caption {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Large desktop styles - matching cell height breakpoints */
+@media (min-width: 1600px) {
+  .bc-metric-caption {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Timeline counter styles */
+.timeline-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: #fff !important;
+}
+
+.timeline-phases-wrapper {
+  padding-top: 16px;
+}
+
+/* Specific override for the "5 → 2 softwares" paragraph to remove bottom margin */
+.bc-body-copy.text-xs.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/* Custom class for tighter margins on specific text elements */
+.tighter-margin {
+  margin-bottom: 4px !important;
+}
+
+/* Override for specific bc-body-copy elements that need tighter margins */
+.bc-body-copy.text-xs.mb-1 {
+  margin-bottom: 4px !important;
+}
+
+/* Specific override for the three headers in Objectives section */
+.objectives-headers {
+  margin-bottom: 12px !important;
+}
+
+@media (min-width: 1100px) {
+  .objectives-headers {
+    margin-bottom: 16px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .objectives-headers {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* Metrics shell styling */
+.metrics-shell {
+  background-color: var(--color-accent-blue-lite);
+  padding: 16px;
+  padding-bottom: 24px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+/* Specific override for the metrics shell in the target impact card */
+.metrics-shell.h-full {
+  height: fit-content !important;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+/* Override bento-card padding for the target impact card */
+.target-impact-card {
+  padding: 24px !important;
+}
+
+/* Mobile override - remove top and side padding */
+@media (max-width: 767px) {
+  .target-impact-card {
+    padding: 0 !important;
+    height: fit-content !important;
+    min-height: fit-content !important;
+  }
+}
+
+/* Remove padding from bento-card-content for target impact card */
+.target-impact-card .bento-card-content {
+  padding: 0 !important;
+}
+
+/* ---------------------------- */
+/* ---------- stakeholder-alignment -------- */
+/* ---------------------------- */
+.stakeholder-alignment-content-shell {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.stakeholder-shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.stakeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(65%, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 3vw 8vw; 
+  padding-left: 8px;
+  margin-bottom: 40px;
+  max-width: 60%;
+  margin-top: 30px;
+}
+
+.stakeholder-leadin-shell {
+  width: 100%;
+}
+
+.team-member-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 116px;
+  height: 116px;
+  border-radius: 105px;
+  margin-bottom: 8px;
+  border: 5px solid #ffffff;
+  box-shadow: 8px 8px 16px #e8e8e8, 4px 4px 8px #e1e1e1;
+  opacity: 97%;
+}
+
+/* Team member image backgrounds will be handled via inline styles in React component */
+
+.interviewee-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.interviewee-role {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Desktop styles */
+@media (min-width: 960px) {
+  .stakeholder-alignment-content-shell {
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  
+  .stakeholder-grid {
+    grid-template-columns: repeat(2, minmax(55%, 1fr));
+    grid-auto-rows: min-content;
+    grid-gap: 1.5vw 3vw; 
+    margin-right: 150px;
+    padding-left: 24px;
+    margin-bottom: 0px;
+    max-width: 100%;
+    min-width: none;
+    margin-top: 0;
+  }
+  
+  .team-member-image {
+    width: 203px;
+    height: 203px;
+    margin-bottom: 22px;
+  }
+}
