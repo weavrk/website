@@ -249,23 +249,23 @@ const About: React.FC = () => {
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">1</p>
-            <p className="about-metrics-sm">Professional degree</p>
+            <p className="about-metrics-sm">Professional Degree</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">2</p>
-            <p className="about-metrics-sm">Masters degrees</p>
+            <p className="about-metrics-sm">Masters Degrees</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">3</p>
             <p className="about-metrics-sm">Certificates</p>
           </div>
           <div className="about-metrics-item">
-            <p className="about-metrics-lg">7</p>
-            <p className="about-metrics-sm">Licensing exams</p>
+            <p className="about-metrics-lg">7 <span className="about-metrics-md">Passed</span></p>
+            <p className="about-metrics-sm">Licensing Exams</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">9</p>
-            <p className="about-metrics-sm">Portfolio iterations</p>
+            <p className="about-metrics-sm">Portfolio Iterations</p>
           </div>
           </div>
           <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
@@ -286,8 +286,8 @@ const About: React.FC = () => {
           <div style={{ borderTop: '1px solid var(--color-secondary)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
           <div className="about-metrics-item about-metrics-item-full-width">
-            <p className="about-metrics-lg">{totalDesignYears} <span className="about-metrics-md">yrs</span></p>
-            <p className="about-metrics-sm">Design</p>
+            <p className="about-metrics-lg">14.9 <span className="about-metrics-md">yrs</span></p>
+            <p className="about-metrics-sm">Professional Design Experience</p>
           </div>
           </div>
           </div>
