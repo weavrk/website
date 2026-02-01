@@ -308,7 +308,7 @@ const About: React.FC = () => {
       {/* Block Text Section */}
       <section className="about-section">
         <p className="about-section-leadin">
-          Design transcends medium, field, and job title. At its core, it is about systems, patterns, and communication.
+          Design transcends field and job title. At its core, it is about systems, patterns, and communication.
         </p>
       </section>
 
