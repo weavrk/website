@@ -229,7 +229,7 @@ const About: React.FC = () => {
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">47<span className="about-metrics-md">+</span></p>
-            <p className="about-metrics-sm">Features/Improvements Shipped</p>
+            <p className="about-metrics-sm">Features & Improvements Shipped</p>
           </div>
           <div className="about-metrics-item">
             <p className="about-metrics-lg">2</p>
