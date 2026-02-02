@@ -67,38 +67,46 @@ const About: React.FC = () => {
   const aiSubsections: AISubsection[] = [
     {
       title: 'AI Augmented Design',
-      subtitle: 'Rapid Prototyping',
-      description: 'Using AI tools to quickly iterate on design concepts, explore variations, and generate initial mockups. This accelerates the ideation phase and allows for more experimentation before committing to a direction.',
+      subtitle: 'Rapid Early Ideation',
+      description: 'AI is useful early in design when constraints are loose and the goal is exploration. I iterate through broad variations by setting initial boundaries and letting AI generate content flows and UI possibilities. This surfaces unexpected directions rather than narrowing on a single idea too soon.',
       images: [
-        { src: '/images/project-pages/placeholder.webp', caption: 'AI-generated design variations' },
-        { src: '/images/project-pages/placeholder.webp', caption: 'Rapid prototyping workflow' }
+        { src: '/images/about/ai-rapid-early-ideation-1.webp', caption: 'AI-generated design variations' },
+        { src: '/images/about/ai-rapid-early-ideation-2.webp', caption: 'Rapid prototyping workflow' },
+        { src: '/images/about/ai-rapid-early-ideation-3.webp', caption: 'Content flow variations' },
+        { src: '/images/about/ai-rapid-early-ideation-4.webp', caption: 'UI possibilities exploration' }
       ]
     },
     {
       title: 'AI Augmented Design',
-      subtitle: 'Content Generation',
-      description: 'Leveraging AI for generating placeholder content, user personas, and scenario descriptions. This helps maintain focus on design structure and user flow without getting bogged down in content creation early in the process.',
+      subtitle: 'Proof of Concept',
+      description: 'I vibe code lightweight tools and working prototypes early. The proof of concept acts as both a scoping exercise and a testing ground, allowing teams to interact with ideas directly. This short-circuits long product cycles, exposes assumptions earlier, and grounds conversations in real behavior and constraints early.',
       images: [
-        { src: '/images/project-pages/placeholder.webp', caption: 'AI-generated user personas' },
-        { src: '/images/project-pages/placeholder.webp', caption: 'Content variations' }
+        { src: '/images/about/ai-proof-of-concept-1.webp', caption: 'AI-generated user personas' },
+        { src: '/images/about/ai-proof-of-concept-2.webp', caption: 'Content variations' },
+        { src: '/images/about/ai-proof-of-concept-3.webp', caption: 'Prototype interactions' },
+        { src: '/images/about/ai-proof-of-concept-4.webp', caption: 'Scoping exercises' }
       ]
     },
     {
       title: 'AI Augmented Design',
-      subtitle: 'Design System Automation',
-      description: 'Using AI to generate consistent design tokens, component variations, and documentation. This ensures design system scalability while maintaining human oversight for quality and brand alignment.',
+      subtitle: 'Copy Tuning and Behavioral Research',
+      description: 'I explore tone, messaging, and microcopy through agentic feedback loops. This includes generating variants, stress-testing language for clarity and intent, and aligning copy with behavioral patterns. The goal is concise language that supports behavior and reduces friction.',
       images: [
-        { src: '/images/project-pages/placeholder.webp', caption: 'Automated design tokens' },
-        { src: '/images/project-pages/placeholder.webp', caption: 'Component variations' }
+        { src: '/images/about/ai-copy-tuning-and-behavioral-research-1.webp', caption: 'Automated design tokens' },
+        { src: '/images/about/ai-copy-tuning-and-behavioral-research-2.webp', caption: 'Component variations' },
+        { src: '/images/about/ai-copy-tuning-and-behavioral-research-3.webp', caption: 'Messaging variants' },
+        { src: '/images/about/ai-copy-tuning-and-behavioral-research-4.webp', caption: 'Behavioral pattern alignment' }
       ]
     },
     {
       title: 'AI Augmented Design',
-      subtitle: 'User Research Synthesis',
-      description: 'Employing AI to analyze user interviews, surveys, and feedback at scale. This helps identify patterns and insights that might be missed in manual analysis, while the designer focuses on interpretation and design decisions.',
+      subtitle: 'Data Querying',
+      description: 'AI helps accelerate early data work by supporting quick SQL writing to pull aggregates, counts, and patterns needed for identifying trends, business gaps, user behavior. This allows me to shape data-driven interfaces without waiting on full data pipelines or analytics support. The result is tighter alignment between data structure and design intent.',
       images: [
-        { src: '/images/project-pages/placeholder.webp', caption: 'Research synthesis dashboard' },
-        { src: '/images/project-pages/placeholder.webp', caption: 'Pattern identification' }
+        { src: '/images/about/ai-data-query-1.webp', caption: 'Research synthesis dashboard' },
+        { src: '/images/about/ai-data-query-2.webp', caption: 'Pattern identification' },
+        { src: '/images/about/ai-data-query-3.webp', caption: 'Data-driven interfaces' },
+        { src: '/images/about/ai-data-query-4.webp', caption: 'SQL query generation' }
       ]
     }
   ];
@@ -142,16 +150,18 @@ const About: React.FC = () => {
           </p>
           <div className="about-growth-model-container">
             {/* Cumulative Diagram */}
-            <div className="about-growth-item">
-              <div className="about-growth-diagram-wrapper">
-                <img src="/images/about/growth-cumulative.svg" alt="Cumulative growth model" className="about-growth-image" />
-                <p className="about-caption-copy about-growth-caption-mobile">
-                  Multiple areas of expertise at different depths
-                </p>
-                <p className="about-caption-copy about-growth-caption-desktop">
-                  Multiple areas of expertise at different depths
-                </p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div className="about-growth-item about-card-metrics">
+                <div className="about-growth-diagram-wrapper">
+                  <img src="/images/about/growth-cumulative.svg" alt="Cumulative growth model" className="about-growth-image" />
+                </div>
               </div>
+              <p className="about-caption-copy about-growth-caption-mobile">
+                Multiple areas of expertise at different depths
+              </p>
+              <p className="about-caption-copy about-growth-caption-desktop">
+                Multiple areas of expertise at different depths
+              </p>
             </div>
 
             {/* Arrow */}
@@ -160,16 +170,18 @@ const About: React.FC = () => {
             </div>
 
             {/* Compounding Diagram */}
-            <div className="about-growth-item">
-              <div className="about-growth-diagram-wrapper">
-                <img src="/images/about/growth-compounding.svg" alt="Compounding growth model" className="about-growth-image" />
-                <p className="about-caption-copy about-growth-caption-mobile">
-                  Continuous learning with accelerating growth phases
-                </p>
-                <p className="about-caption-copy about-growth-caption-desktop">
-                  Continuous learning with accelerating growth phases
-                </p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div className="about-growth-item about-card-emboss">
+                <div className="about-growth-diagram-wrapper">
+                  <img src="/images/about/growth-compounding.svg" alt="Compounding growth model" className="about-growth-image" />
+                </div>
               </div>
+              <p className="about-caption-copy about-growth-caption-mobile">
+                Continuous learning with accelerating growth phases
+              </p>
+              <p className="about-caption-copy about-growth-caption-desktop">
+                Continuous learning with accelerating growth phases
+              </p>
             </div>
           </div>
         </div>
@@ -190,27 +202,27 @@ const About: React.FC = () => {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
           <p className="about-diagram-header">2025 Top Metrics</p>
           <div className="about-metrics-grid-simple">
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">3.56<span className="about-metrics-md">B+</span></p>
             <p className="about-metrics-sm">Tokens</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">137 <span className="about-metrics-md">hrs</span></p>
             <p className="about-metrics-sm">Podcasts & Audiobooks</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">8<span className="about-metrics-md">x</span></p>
             <p className="about-metrics-sm">Nerd Sniped</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">14<span className="about-metrics-md">%</span> <span className="about-metrics-md">Top</span></p>
             <p className="about-metrics-sm">Cursor Usage</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">144 <span className="about-metrics-md">days</span></p>
             <p className="about-metrics-sm">Vibe Coding</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">10<span className="about-metrics-md">x</span></p>
             <p className="about-metrics-sm">New Sandbox Projects</p>
           </div>
@@ -219,73 +231,73 @@ const About: React.FC = () => {
           </div>
           <p className="about-diagram-header">Lifetime Metrics</p>
           <div className="about-metrics-grid-simple">
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">8.2 <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Volunteer Mentorship</p>
           </div>
-          <div className="about-metrics-item">
-            <p className="about-metrics-lg">107<span className="about-metrics-md">+</span></p>
-            <p className="about-metrics-sm">User Interviews</p>
-          </div>
-          <div className="about-metrics-item">
+            <div className="about-metrics-item about-card-metrics">
+              <p className="about-metrics-lg">71<span className="about-metrics-md">+</span></p>
+              <p className="about-metrics-sm">User Interviews</p>
+            </div>
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">47<span className="about-metrics-md">+</span></p>
             <p className="about-metrics-sm">Features & Improvements Shipped</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">2</p>
             <p className="about-metrics-sm">0→1 Design Systems Built</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">367<span className="about-metrics-md">k</span> <span className="about-metrics-md">SF</span></p>
             <p className="about-metrics-sm">Building Area Designed</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">$84<span className="about-metrics-md">M</span></p>
             <p className="about-metrics-sm">Managed Construction Projects</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">$62.7<span className="about-metrics-md">M</span></p>
             <p className="about-metrics-sm">Client Recurring Revenue Generated</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">$12.4<span className="about-metrics-md">M</span></p>
             <p className="about-metrics-sm">Company Recurring Revenue Generated</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">3</p>
-            <p className="about-metrics-sm">Higher-Ed Degree</p>
+            <p className="about-metrics-sm">Higher Education Degrees</p>
           </div>
-          <div className="about-metrics-item">
-            <p className="about-metrics-lg">3 <span className="about-metrics-md">CE Dev</span></p>
-            <p className="about-metrics-sm">Certificates</p>
+          <div className="about-metrics-item about-card-metrics">
+            <p className="about-metrics-lg">3 <span className="about-metrics-md">Dev</span></p>
+            <p className="about-metrics-sm">Continuing Education Certificates</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">7 <span className="about-metrics-md">Passed</span></p>
             <p className="about-metrics-sm">Licensing Exams</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">9<span className="about-metrics-md">x</span></p>
             <p className="about-metrics-sm">Rebuilt Portfolio</p>
           </div>
           </div>
           <div style={{ borderTop: '1px solid var(--color-accent-blue-lite)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">{productDesignYears.toFixed(1)} <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Product Design</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">3.1 <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Revenue-Driven Experience Design</p>
           </div>
-          <div className="about-metrics-item">
+          <div className="about-metrics-item about-card-metrics">
             <p className="about-metrics-lg">7.8 <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Architecture</p>
           </div>
           </div>
           <div style={{ borderTop: '1px solid var(--color-accent-blue-lite)', marginTop: '24px', paddingTop: '24px' }}>
           <div className="about-metrics-grid-simple">
-          <div className="about-metrics-item about-metrics-item-full-width">
+          <div className="about-metrics-item about-metrics-item-full-width about-card-metrics">
             <p className="about-metrics-lg">{totalDesignYears} <span className="about-metrics-md">yrs</span></p>
             <p className="about-metrics-sm">Professional Design Experience</p>
           </div>
@@ -308,7 +320,7 @@ const About: React.FC = () => {
       {/* Block Text Section */}
       <section className="about-section">
         <p className="about-section-leadin">
-          Design transcends field and job title. At its core, it is about systems, patterns, and communication.
+          Design transcends fields and job titles. Fundamentally, it is the patterning of systems for human behavior.
         </p>
       </section>
 
@@ -318,28 +330,34 @@ const About: React.FC = () => {
         <div className="about-principles-section">
           <h2 className="about-section-header">Principles</h2>
           <div className="about-principles-grid">
-            <div>
-              <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Layout: Visual Hierarchy & Wayfinding</h4>
-              <p className="about-section-copy">
-                Clear information architecture guides users naturally through interfaces, reducing friction and cognitive overhead.
+            <div className="about-card about-card-blue-lite">
+              <h3 className="about-tag">Design for Humans</h3>
+              <p className="about-body-copy">
+                Whether designing at human scale or for digital users, human-centered design puts real people at the center of the problem. Start from human needs, context, and behavior rather than system convenience or internal metrics. Tone, clarity, and empathy matter as much as functionality.
               </p>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Type: Legibility is King</h4>
-              <p className="about-section-copy about-text-italic">
-                "Legibility is king" — Robert Bringhurst. Typography serves communication first, aesthetics second.
+            <div className="about-card about-card-blue-mid">
+              <h3 className="about-tag">Clarity First</h3>
+              <p className="about-body-copy">
+                Form follows function (Sullivan). Structure and hierarchy should guide attention and priority, not compete for it. Use progressive disclosure to make complexity manageable, and apply aesthetics intentionally.
               </p>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Structure & Scalability: Modularity</h4>
-              <p className="about-section-copy">
-                Building with reusable, composable components ensures consistency and enables rapid iteration at scale.
+            <div className="about-card about-card-blue-dark">
+              <h3 className="about-tag">Build Trust</h3>
+              <p className="about-body-copy">
+                Design is a partnership. Avoid dark patterns, hidden logic, or obscured information. Treat users as collaborators rather than conversion metrics. Transparency, predictability, and honesty create confidence and long-term value.
               </p>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold text-primary about-subsection-title-sm">Behavior Before Aesthetics</h4>
-              <p className="about-section-copy">
-                Form follows function still holds. But... people have higher trust in aesthetically pleasing things. Balance is key.
+            <div className="about-card about-card-yellow-mid">
+              <h3 className="about-tag">Reduce Cognitive Load</h3>
+               <p className="about-body-copy">
+                 Do not overwhelm users with choice or burdensome mental effort. Apply heuristics like Miller's Law (limits of working memory) and Hick's Law (more choices increase decision time) to support faster understanding and decision-making.
+               </p>
+            </div>
+            <div className="about-card about-card-yellow-dark">
+              <h3 className="about-tag">A Pattern Language</h3>
+              <p className="about-body-copy">
+                Build systems from clear, modular patterns that align with how users already think. Favor foundational units over novelty. Patterns should reinforce mental models, scale over time, and remain understandable as complexity grows.
               </p>
             </div>
           </div>
@@ -350,33 +368,53 @@ const About: React.FC = () => {
           <h2 className="about-section-header">Design Heuristics</h2>
           
           <div className="about-heuristics-grid">
-            {/* Behavioral Sciences */}
-            <div>
-              <h3 className="text-lg font-semibold text-primary about-subsection-title">Behavioral Sciences</h3>
-              <p className="about-section-copy">
-                Understanding cognitive biases, decision-making patterns, and human psychology to create more intuitive and effective designs.
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Behavioral Sciences</h3>
+              <p className="about-body-copy">
+                Understand how people think, decide, and make mistakes. Use cognitive biases and psychology to design systems that feel intuitive instead of demanding extra effort.
               </p>
             </div>
-
-            {/* Patterns and Mental Models */}
-            <div>
-              <h3 className="text-lg font-semibold text-primary about-subsection-title">Patterns & Mental Models</h3>
-              <p className="about-section-copy">
-                Leveraging established design patterns and user mental models to create familiar, learnable interfaces that reduce cognitive load.
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Mental Models</h3>
+              <p className="about-body-copy">
+                Build on patterns people already recognize. Familiar structures make interfaces easier to learn and reduce cognitive load.
               </p>
             </div>
-
-            {/* Third Column - Principles Project Ad */}
-            <div className="role-tag-blue-lite about-principles-card about-card-rounded"
-                 style={{ backgroundColor: 'var(--color-accent-blue-lite)' }}
-                 onClick={() => navigate('/work/principles-of-human-behavior')}>
-              <h3 className="text-lg font-semibold text-primary about-principles-card-title">Principles of Human Behavior</h3>
-              <p className="text-sm text-primary about-principles-card-text">
-                Explore my project on design principles grounded in behavioral science
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Make Data Actionable, Not Decorative</h3>
+              <p className="about-body-copy">
+                Data should help people decide or act. If a visualization does not change behavior, it is just noise.
               </p>
-              <div className="text-primary font-semibold text-sm">
-                View Project →
-              </div>
+            </div>
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Surface Assumptions and Gaps</h3>
+              <p className="about-body-copy">
+                Hidden uncertainty breaks trust. Being clear about what is missing or assumed is better than pretending data is complete.
+              </p>
+            </div>
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Expose Structure Before Detail</h3>
+              <p className="about-body-copy">
+                Show the shape of the system first. Let people understand how things fit together before asking them to engage with complexity.
+              </p>
+            </div>
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Prevent Errors Before Handling Them</h3>
+              <p className="about-body-copy">
+                Design to reduce mistakes upfront. It is better to guide users away from errors than rely on fixes later.
+              </p>
+            </div>
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Respect User Effort</h3>
+              <p className="about-body-copy">
+                Every step, field, and decision has a cost. If it does not clearly add value, it should not be there.
+              </p>
+            </div>
+            <div className="about-card-metrics">
+              <h3 className="about-diagram-header">Always Provide a Way Forward</h3>
+              <p className="about-body-copy">
+                Users should never reach a state without knowing what to do next. Every screen should offer direction, recovery, or progress.
+              </p>
             </div>
           </div>
         </div>
@@ -389,21 +427,29 @@ const About: React.FC = () => {
           <h2 className="about-section-break">AI Augmented Design</h2>
           <div className="break-line-landing-secondary-b"></div>
         </div>
-        <p className="about-section-copy about-intro-text">
-          Exploring how AI tools enhance rather than replace the design process. From rapid prototyping to research synthesis, AI amplifies human creativity and strategic thinking.
-        </p>
+          <p className="about-section-copy about-intro-text">
+            I use AI as an extension of the design process, not a replacement for judgment or craft. It helps me move faster in early exploration, pressure-test ideas, and build tangible artifacts that inform product direction before committing to full scope or production work.
+          </p>
 
         {/* 4 Quadrant Grid */}
         <div className="about-ai-grid">
           {aiSubsections.map((subsection, index) => (
             <div
               key={index}
-              className="bento-card-deboss about-ai-card about-card-rounded about-card-transition"
-              style={{ backgroundColor: 'var(--color-background)' }}
+              className="about-card about-card-gray-dark about-card-ai"
               onClick={() => handleAISectionClick(subsection)}
             >
-              <h3 className="text-lg font-semibold text-primary about-ai-card-title">{subsection.subtitle}</h3>
-              <p className="text-sm text-primary about-text-clamp">{subsection.description}</p>
+              <div className="about-ai-card-content">
+                <h3 className="about-tag">{subsection.subtitle}</h3>
+                <p className="about-body-copy">{subsection.description}</p>
+              </div>
+              <div className="about-ai-card-image">
+                <img 
+                  src={subsection.images[0]?.src || '/images/project-pages/placeholder.webp'} 
+                  alt={subsection.images[0]?.caption || subsection.subtitle}
+                  className="about-ai-card-img"
+                />
+              </div>
             </div>
           ))}
         </div>

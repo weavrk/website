@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import CloseButton from './CloseButton';
 import ImageCarousel from './ImageCarousel';
 
@@ -23,6 +23,7 @@ interface AISectionSheetProps {
 const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsection }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const sheetRef = useRef<HTMLDivElement>(null);
 
   const handleClose = useCallback(() => {
     setIsAnimating(false);
@@ -66,7 +67,8 @@ const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsec
   }, [isOpen, handleClose]);
 
   const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
+    // Close when clicking on the backdrop (anywhere outside the sheet content)
+    if (sheetRef.current && !sheetRef.current.contains(e.target as Node)) {
       handleClose();
     }
   };
@@ -75,24 +77,27 @@ const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsec
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-end bg-black bg-opacity-50 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] bg-black bg-opacity-50 backdrop-blur-sm"
       onClick={handleBackdropClick}
+      style={{ cursor: 'pointer' }}
     >
       <div 
-        className={`w-full bg-background transform transition-all duration-400 ease-in-out md:h-[calc(100vh-24px)] h-[calc(100vh-24px)] ${
+        ref={sheetRef}
+        className={`fixed bottom-0 left-0 right-0 w-full bg-background transform transition-all duration-400 ease-in-out md:h-[calc(100vh-82px)] h-[calc(100vh-82px)] flex flex-col ${
           isAnimating ? 'translate-y-0' : 'translate-y-full'
         }`}
         style={{
           borderTopLeftRadius: '24px',
           borderTopRightRadius: '24px',
-          boxShadow: '0 -8px 25px -4px rgba(0, 0, 0, 0.15), 0 -4px 10px -2px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 -8px 25px -4px rgba(0, 0, 0, 0.15), 0 -4px 10px -2px rgba(0, 0, 0, 0.1)',
+          marginTop: '80px',
+          cursor: 'default'
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center py-4 px-4 md:px-8" style={{ paddingLeft: '5vw', paddingRight: '2vw' }}>
+        <div className="flex justify-between items-center py-4 px-4 md:px-8 flex-shrink-0" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
           <div>
-            <h2 className="bc-title text-primary">{subsection.title}</h2>
-            <h3 className="text-lg font-semibold text-primary mt-2">{subsection.subtitle}</h3>
+            <h3 className="about-section-header about-sheet-header">{subsection.subtitle}</h3>
           </div>
           <CloseButton 
             onClose={handleClose}
@@ -100,8 +105,8 @@ const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsec
           />
         </div>
         
-        <div className="h-[calc(100vh-120px)] overflow-y-auto px-4 md:px-8" style={{ paddingLeft: '5vw', paddingRight: '5vw' }}>
-          <p className="home-section-copy mb-8 mt-4">{subsection.description}</p>
+        <div className="overflow-y-auto px-4 md:px-8 flex-1" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
+          <p className="home-section-copy about-ai-description mb-8 mt-4">{subsection.description}</p>
           <ImageCarousel images={subsection.images} />
         </div>
       </div>

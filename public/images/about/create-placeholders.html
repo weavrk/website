@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Placeholders</title>
+</head>
+<body>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <script>
+    const useCases = [
+      'rapid-early-ideation',
+      'proof-of-concept',
+      'copy-tuning-and-behavioral-research',
+      'data-querying'
+    ];
+    
+    const canvas = document.getElementById('canvas');
+    canvas.width = 1280;
+    canvas.height = 720;
+    const ctx = canvas.getContext('2d');
+    
+    // Tertiary background color
+    ctx.fillStyle = '#EDEDED';
+    ctx.fillRect(0, 0, 1280, 720);
+    
+    useCases.forEach(useCase => {
+      for (let i = 1; i <= 4; i++) {
+        // Reset canvas
+        ctx.fillStyle = '#EDEDED';
+        ctx.fillRect(0, 0, 1280, 720);
+        
+        // Draw image icon
+        ctx.strokeStyle = '#323535';
+        ctx.fillStyle = '#323535';
+        ctx.lineWidth = 4;
+        
+        const centerX = 640;
+        const centerY = 360;
+        const iconSize = 120;
+        
+        // Draw rectangle frame
+        ctx.strokeRect(centerX - iconSize, centerY - iconSize/2, iconSize * 2, iconSize);
+        
+        // Draw mountain/peak shape
+        ctx.beginPath();
+        ctx.moveTo(centerX - iconSize/2, centerY + iconSize/2 - 20);
+        ctx.lineTo(centerX, centerY - iconSize/2 + 20);
+        ctx.lineTo(centerX + iconSize/2, centerY + iconSize/2 - 20);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Convert to blob and download
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `ai-${useCase}-${i}.webp`;
+          a.click();
+          URL.revokeObjectURL(url);
+        }, 'image/webp', 0.9);
+      }
+    });
+  </script>
+</body>
+</html>

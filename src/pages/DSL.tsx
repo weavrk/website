@@ -114,6 +114,7 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
     { name: 'Yellow Mid', class: 'role-tag-yellow-mid', color: 'var(--color-accent-yellow-mid)' },
     { name: 'Yellow Dark', class: 'role-tag-yellow-dark', color: 'var(--color-accent-yellow-dark)' },
     { name: 'Pink Mid', class: 'role-tag-pink-mid', color: 'var(--color-accent-pink-mid)' },
+    { name: 'Gray Dark', class: 'role-tag-gray-dark', color: 'var(--color-primary)' },
     { name: 'White', class: 'role-tag-white', color: 'var(--color-white)' },
   ];
 
@@ -168,15 +169,15 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
         {/* Role Tag Shadows Section */}
         <section className="mb-12">
           <DSLHeader title="color-based-shadows" />
-          <div className="grid grid-cols-9 gap-4">
+          <div className="flex flex-wrap gap-4">
             {roleTagShadows.map((roleTag, index) => (
-              <div key={index} className="flex flex-col items-start w-full">
+              <div key={index} className="flex flex-col items-start flex-shrink-0">
                 <div 
                   className={`w-24 h-24 rounded-full mb-3 ${roleTag.class}`}
                   style={{ backgroundColor: roleTag.color }}
                 />
-                <p className="text-sm font-semibold text-left">{roleTag.name}</p>
-                <p className="text-xs text-gray-400 mt-1">.{roleTag.class}</p>
+                <p className="text-sm font-semibold text-left text-white">{roleTag.name}</p>
+                <p className="text-xs text-white mt-1 opacity-70">.{roleTag.class}</p>
                 
                 {/* Role tag example below each circle */}
                 <div className="mt-3 w-full">
@@ -188,7 +189,7 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                       className={`px-3 py-2 rounded-full text-xs font-medium ${roleTag.class}`}
                       style={{ 
                         backgroundColor: roleTag.color,
-                        color: 'var(--color-primary)'
+                        color: roleTag.class === 'role-tag-gray-dark' ? 'var(--color-secondary)' : 'white'
                       }}
                     >
                       {roleTag.name}
@@ -369,6 +370,28 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                       <div>1600px:</div><div>20px, 1.2</div>
                       <div>weight:</div><div>700</div>
                       <div>color:</div><div>primary</div>
+                      <div>margin-bottom:</div><div>16px</div>
+                      <div>margin-top:</div><div>0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="neumorph-lg p-4 rounded-2xl bg-background overflow-hidden flex flex-col justify-between dsl-text-cards">
+                <div className="text-xs text-primary opacity-60 mb-4">about-tag</div>
+                <div className="type-card-body">
+                  <div className="sample-text">
+                    <h3 className="about-tag" style={{ padding: '8px 16px', borderRadius: '20px', backgroundColor: 'var(--color-accent-blue-mid)', margin: '0 0 16px 0', display: 'inline-block', width: 'fit-content' }}>Card Header</h3>
+                  </div>
+                  <div className="text-xs text-primary">
+                    <div className="grid grid-cols-[auto_1fr] gap-x-2">
+                      <div>mobile:</div><div>18px, 1.2</div>
+                      <div>1100px:</div><div>16px, 1.2</div>
+                      <div>1600px:</div><div>20px, 1.2</div>
+                      <div>weight:</div><div>700</div>
+                      <div>color:</div><div>primary</div>
+                      <div>margin-bottom:</div><div>16px (mobile), 24px (1100px), 20px (1600px)</div>
+                      <div>padding:</div><div>8px 16px</div>
+                      <div>border-radius:</div><div>20px</div>
                     </div>
                   </div>
                 </div>
@@ -381,8 +404,8 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                   </div>
                   <div className="text-xs text-primary">
                     <div className="grid grid-cols-[auto_1fr] gap-x-2">
-                      <div>mobile:</div><div>18px, 1.3</div>
-                      <div>1100px:</div><div>24px, 1.3</div>
+                      <div>mobile:</div><div>18px, 1.4</div>
+                      <div>1100px:</div><div>24px, 1.4</div>
                       <div>1600px:</div><div>24px, 1.4</div>
                       <div>weight:</div><div>300</div>
                       <div>color:</div><div>primary</div>
@@ -398,11 +421,12 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                   </div>
                   <div className="text-xs text-primary">
                     <div className="grid grid-cols-[auto_1fr] gap-x-2">
-                      <div>mobile:</div><div>12px, 1.3</div>
-                      <div>1100px:</div><div>12px, 1.3</div>
-                      <div>1600px:</div><div>12px, 1.3</div>
+                      <div>mobile:</div><div>14px, 1.3</div>
+                      <div>1100px:</div><div>18px, 1.3</div>
+                      <div>1600px:</div><div>18px, 1.3</div>
                       <div>weight:</div><div>400</div>
                       <div>color:</div><div>primary</div>
+                      <div>width:</div><div>80vw (mobile), 40vw (480px+), 25vw (1100px+)</div>
                     </div>
                   </div>
                 </div>
@@ -411,13 +435,13 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                 <div className="text-xs text-primary opacity-60 mb-4">about-body-copy</div>
                 <div className="type-card-body">
                   <div className="sample-text">
-                    <p className="about-caption-copy">Going through an existential moment with metrics, so had some fun with metrics that convey who I am</p>
+                    <p className="about-body-copy">Whether designing at human scale or for digital users, human-centered design puts real people at the center of the problem.</p>
                   </div>
                   <div className="text-xs text-primary">
                     <div className="grid grid-cols-[auto_1fr] gap-x-2">
-                      <div>mobile:</div><div>12px, 1.3</div>
-                      <div>1100px:</div><div>12px, 1.3</div>
-                      <div>1600px:</div><div>12px, 1.3</div>
+                      <div>mobile:</div><div>16px, 1.3</div>
+                      <div>1100px:</div><div>18px, 1.3</div>
+                      <div>1600px:</div><div>20px, 1.3</div>
                       <div>weight:</div><div>400</div>
                       <div>color:</div><div>primary</div>
                     </div>
@@ -433,10 +457,10 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                   <div className="text-xs text-primary">
                     <div className="grid grid-cols-[auto_1fr] gap-x-2">
                       <div>mobile:</div><div>28px, 1.2</div>
-                      <div>768px:</div><div>32px, 1.2</div>
-                      <div>1600px:</div><div>36px, 1.2</div>
+                      <div>768px:</div><div>36px, 1.2</div>
+                      <div>1600px:</div><div>42px, 1.2</div>
                       <div>weight:</div><div>500</div>
-                      <div>color:</div><div>primary</div>
+                      <div>color:</div><div>accent-blue-dark</div>
                     </div>
                   </div>
                 </div>
@@ -453,7 +477,7 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                       <div>768px:</div><div>24px, 1.2</div>
                       <div>1600px:</div><div>28px, 1.2</div>
                       <div>weight:</div><div>500</div>
-                      <div>color:</div><div>primary</div>
+                      <div>color:</div><div>accent-blue-dark</div>
                     </div>
                   </div>
                 </div>
@@ -470,9 +494,29 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                       <div>768px:</div><div>14px, 1.3</div>
                       <div>1600px:</div><div>16px, 1.3</div>
                       <div>weight:</div><div>700</div>
-                      <div>color:</div><div>accent-blue-dark</div>
-                      <div>padding:</div><div>16px (p-4)</div>
-                      <div>margin-bottom:</div><div>16px (mb-4) on label</div>
+                      <div>color:</div><div>primary</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="neumorph-lg p-4 rounded-2xl bg-background overflow-hidden flex flex-col justify-between dsl-text-cards">
+                <div className="text-xs text-primary opacity-60 mb-4">about-card</div>
+                <div className="type-card-body">
+                  <div className="sample-text">
+                    <div className="about-card about-card-blue-mid" style={{ borderRadius: '16px', padding: '24px', backgroundColor: 'var(--color-accent-blue-mid)' }}>
+                      <h3 className="about-tag" style={{ padding: '8px 16px', borderRadius: '20px', backgroundColor: 'var(--color-accent-blue-mid)', margin: '0 0 16px 0', display: 'inline-block', width: 'fit-content' }}>Card Header</h3>
+                      <p className="about-body-copy">Card body copy using about-body-copy style.</p>
+                    </div>
+                  </div>
+                  <div className="text-xs text-primary">
+                    <div className="grid grid-cols-[auto_1fr] gap-x-2">
+                      <div>border-radius:</div><div>16px</div>
+                      <div>background:</div><div>full card color</div>
+                      <div>padding:</div><div>24px</div>
+                      <div>header:</div><div>about-tag</div>
+                      <div>body:</div><div>about-body-copy</div>
+                      <div>card shadow:</div><div>background style</div>
+                      <div>tag shadow:</div><div>color-based</div>
                     </div>
                   </div>
                 </div>
