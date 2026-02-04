@@ -1917,6 +1917,7 @@
 
 @media (min-width: 768px) {
   .ai-carousel-image {
+    object-fit: contain;
     object-position: top;
   }
 }
