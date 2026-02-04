@@ -88,7 +88,7 @@ const DSLSheet: React.FC<DSLSheetProps> = ({ isOpen, onClose }) => {
       >
         {/* Header with close button */}
         <div className="flex justify-between items-center py-2 px-4" style={{ paddingLeft: '5vw', paddingRight: '2vw' }}>
-          <h2 className="bc-title text-primary">Pattern Library</h2>
+          <h2 className="pattern-library-drawer text-primary">Pattern Library</h2>
           <CloseButton 
             onClose={handleClose}
             ariaLabel="Close DSL sheet"

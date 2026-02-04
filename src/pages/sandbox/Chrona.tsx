@@ -26,7 +26,7 @@ const Chrona: React.FC = () => {
           </div>
           
           <p className="text-xl text-primary">
-            Time Management
+            Health Tracking
           </p>
         </div>
       </div>

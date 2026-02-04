@@ -436,10 +436,10 @@ export const sandboxProjects: Project[] = [
     id: 'chrona',
     title: 'Chrona',
     titleSandbox: 'Chrona',
-    role: 'Time Management',
-    description: 'A time tracking and productivity tool.',
+    role: 'Health Tracking',
+    description: 'A health tracking web app for custom labels.',
     image: '/images/thumbnails/sandbox-chrona.webp',
-    url: '/#/sandbox/chrona',
+    url: 'https://www.weavrk.com/hrefs/chrona/?mobile=true',
     passwordProtected: false,
     category: 'sandbox'
   },

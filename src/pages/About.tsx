@@ -68,12 +68,12 @@ const About: React.FC = () => {
     {
       title: 'AI Augmented Design',
       subtitle: 'Rapid Early Ideation',
-      description: 'AI is useful early in design when constraints are loose and the goal is exploration. I iterate through broad variations by setting initial boundaries and letting AI generate content flows and UI possibilities. This surfaces unexpected directions rather than narrowing on a single idea too soon.',
+      description: 'Rapid AI-generated design variations gives me a wide surface area to react to. Seeing many variations at once pushes me to think through what each approach would enable for users, how information might be communicated differently, and where clarity or confusion emerges. It\'s less about choosing the right answer quickly and more about sharpening judgment through comparison.',
       images: [
-        { src: '/images/about/ai-rapid-early-ideation-1.webp', caption: 'AI-generated design variations' },
-        { src: '/images/about/ai-rapid-early-ideation-2.webp', caption: 'Rapid prototyping workflow' },
-        { src: '/images/about/ai-rapid-early-ideation-3.webp', caption: 'Content flow variations' },
-        { src: '/images/about/ai-rapid-early-ideation-4.webp', caption: 'UI possibilities exploration' }
+        { src: '/images/about/ai-rapid-early-ideation-1.webp', caption: 'There is a lot of noise in AI generated content, but also a lot to reflect on.' },
+        { src: '/images/about/ai-rapid-early-ideation-2.webp', caption: 'The combination of circular strokes and a red–yellow heatmap makes reliability legible in seconds because visual patterns are faster to recognize.' },
+        { src: '/images/about/ai-rapid-early-ideation-3.webp', caption: 'Rapid iterations helped clarify both the framing and the visual language. Using Early Flex Access shifted the system toward earning and loss aversion rather than punishment.' },
+        { src: '/images/about/ai-rapid-early-ideation-4.webp', caption: 'The circle icons with checks and Xs carried through from prototypes to make reliability status instantly recognizable.' }
       ]
     },
     {

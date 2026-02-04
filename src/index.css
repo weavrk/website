@@ -1264,7 +1264,7 @@
   line-height: 120%;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   margin-top: 0;
 }
 
@@ -1273,7 +1273,7 @@
   .about-diagram-header {
     font-size: 20px;
     line-height: 120%;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1281,7 +1281,7 @@
   .about-diagram-header {
     font-size: 20px;
     line-height: 120%;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1663,8 +1663,14 @@
 
 .about-ai-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .about-ai-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 900px) {
@@ -1848,6 +1854,153 @@
 
 .about-sheet-header {
   margin-bottom: 0;
+}
+
+.pattern-library-drawer {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* AI Caption Container - Fixed Height */
+.ai-caption-container {
+  height: 56px;
+  margin-top: 16px;
+  overflow-y: auto;
+}
+
+@media (min-width: 1600px) {
+  .ai-caption-container {
+    height: 80px;
+  }
+}
+
+/* AI Sheet Close Button */
+.ai-sheet-close-button {
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+}
+
+.ai-sheet-close-button svg {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+/* AI Carousel Image Styles */
+.ai-carousel-image {
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .ai-carousel-image {
+    object-position: top;
+  }
+}
+
+/* AI Carousel Drop Shadow */
+.image-carousel-container {
+  box-shadow: 4px 6px 8px #d5d5d5, -4px -4px 8px #fff;
+}
+
+/* AI Section Sheet Mobile Styles */
+@media (max-width: 767px) {
+  .ai-sheet-container {
+    height: calc(100vh - 72px) !important;
+    margin-top: 72px !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+  
+  .image-carousel-container {
+    height: 60vh !important;
+  }
+  
+  .ai-caption-container {
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ai-sheet-container {
+    margin-top: 80px !important;
+    height: calc(100vh - 82px) !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+}
+
+/* AI Carousel Navigation Button Styles */
+.ai-carousel-nav {
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.ai-carousel-nav:hover {
+  opacity: 0.9;
+}
+
+/* Variant 1: Light background, dark arrows */
+.ai-carousel-nav-default {
+  background-color: var(--color-background);
+  opacity: 0.8;
+}
+
+.ai-carousel-nav-default svg {
+  color: var(--color-primary) !important;
+}
+
+.ai-carousel-nav-default:hover {
+  opacity: 1;
+}
+
+/* Variant 2: Dark background, white arrows - DEFAULT */
+.ai-carousel-nav-inverted {
+  background-color: var(--color-primary) !important;
+  opacity: 0.9;
+}
+
+.ai-carousel-nav-inverted svg {
+  color: var(--color-background) !important;
+  stroke: var(--color-background) !important;
+}
+
+.ai-carousel-nav-inverted:hover {
+  opacity: 1;
+}
+
+/* AI Page Indicator Styles */
+.ai-page-indicator {
+  width: 8px;
+  height: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-page-indicator-active {
+  width: 24px;
+}
+
+/* Variant 1: Original (primary on secondary) */
+.ai-page-indicator-default.ai-page-indicator-active {
+  background-color: var(--color-primary);
+}
+
+.ai-page-indicator-default.ai-page-indicator-inactive {
+  background-color: var(--color-secondary);
+}
+
+/* Variant 2: Inverted (black background, white indicator) - DEFAULT */
+.ai-page-indicator-inverted.ai-page-indicator-active {
+  background-color: var(--color-primary) !important;
+  border: none !important;
+}
+
+.ai-page-indicator-inverted.ai-page-indicator-inactive {
+  background-color: var(--color-secondary) !important;
+  border: 2px solid var(--color-secondary) !important;
+  opacity: 0.6;
 }
 
 .about-card-ai {
@@ -2106,9 +2259,16 @@
   line-height: 1.3;
   font-weight: 400;
   color: var(--color-primary);
+  max-width: 100vw;
 }
 
 /* Responsive styles for about-body-copy */
+@media (min-width: 768px) {
+  .about-body-copy {
+    max-width: 70vw;
+  }
+}
+
 @media (min-width: 1100px) {
   .about-body-copy {
     font-size: 18px;

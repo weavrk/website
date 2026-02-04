@@ -139,8 +139,12 @@ const DSL: React.FC<DSLProps> = ({ isEmbedded = false }) => {
                     borderColor: color.variable === '--color-background' ? 'var(--color-tertiary)' : 'transparent'
                   }}
                 />
-                <p className="text-xs font-mono text-left">{color.variable}</p>
-                <p className="text-xs text-gray-400 mt-1">{computedColors[color.variable] || 'N/A'}</p>
+                {!(color.variable === '--empty-1' || color.variable === '--empty-2') && (
+                  <>
+                    <p className="text-xs font-mono text-left">{color.variable}</p>
+                    <p className="text-xs text-gray-400 mt-1">{computedColors[color.variable] || 'N/A'}</p>
+                  </>
+                )}
               </div>
             ))}
           </div>
