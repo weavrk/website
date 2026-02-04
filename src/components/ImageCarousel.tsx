@@ -64,7 +64,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className = '', c
 
   return (
     <div className={`relative w-full ${className}`}>
-      <div className="relative w-full rounded-lg overflow-hidden image-carousel-container" style={{ backgroundColor: 'var(--color-tertiary)', height: 'calc(100vh - 360px)' }}>
+      <div className="relative w-full rounded-lg overflow-hidden image-carousel-container" style={{ backgroundColor: 'var(--color-tertiary)', height: 'calc(-320px + 100vh)' }}>
         {!imageError ? (
           <img
             src={mobileImages[currentIndex].src}

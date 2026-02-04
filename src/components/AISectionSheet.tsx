@@ -97,7 +97,7 @@ const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsec
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center py-4 px-4 md:px-8 flex-shrink-0" style={{ paddingLeft: '3vw', paddingRight: '0', paddingTop: '2vw', paddingBottom: '0' }}>
+        <div className="flex justify-between items-center flex-shrink-0 ai-sheet-header-container">
           <div>
             <h3 className="about-section-header about-sheet-header">{subsection.subtitle}</h3>
           </div>
@@ -108,7 +108,7 @@ const AISectionSheet: React.FC<AISectionSheetProps> = ({ isOpen, onClose, subsec
           />
         </div>
         
-        <div className="overflow-y-auto px-4 md:px-8 flex-1" style={{ paddingLeft: '3vw', paddingRight: '3vw' }}>
+        <div className="overflow-y-auto flex-1 ai-sheet-content-container">
           <div className="ai-caption-container" style={{ marginBottom: '24px' }}>
             <p className="about-body-copy" style={{ width: '100%' }}>
               {subsection.images[currentImageIndex]?.caption || subsection.description}
